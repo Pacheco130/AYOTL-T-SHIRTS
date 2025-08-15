@@ -1,0 +1,166 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F9E8C6;
+  color: #333;
+}
+
+/* HEADER CON FONDO */
+header {
+     background-color: #FEF1DC;  background: url('../Images/verano.png') no-repeat center center/cover;
+  color: rgb(255, 255, 255);
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+header h1 {
+  font-size: 3rem;
+  z-index: 1;
+  color: #C85A1E;
+
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  margin-right: 1rem;
+  z-index: 1;
+}
+
+.intro-box {
+  background-color: #dfc498;
+  border: 2px solid #C85A1E;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-box img {
+  width: 80px;
+  height: auto;
+}
+
+.intro-box p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+/* BOTONES CAFÉS */
+nav {
+  background-color: #32415E;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a.boton {
+  font-size: 1rem;
+  padding: 0.8em 2em;
+  border-radius: 1em;
+  color: #fff;
+  font-weight: bolder;
+  background-color: #C17828;
+  border: 3px solid #FAE6C6;
+  box-shadow: -5px 5px 0px 0px #C17828;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+nav a.boton:hover {
+  transform: translate(5px, -5px);
+  background-color: #A54A27;
+}
+
+/* TEXTO INTRODUCTORIO */
+.intro-text {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* CARRUSEL */
+.carrusel {
+  background-color: #FEF1DC;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.carrusel h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 20);
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  flex-shrink: 0;
+  margin: 0 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slide p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+}
+
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

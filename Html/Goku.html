@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playeras Dragon Ball - Tienda de Playeras</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('fondo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-con-gifs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .header-con-gifs img {
+      width: 80px;
+      height: auto;
+    }
+
+    h1 {
+      font-family: 'Impact', sans-serif;
+      font-size: 3em;
+      margin: 0;
+      text-shadow:
+        2px 2px 0 #000,
+        4px 4px 8px #ff9900;
+    }
+
+    .btn-regresar {
+      display: block;
+      margin: 0 auto 40px auto;
+      background-color: #ff6f00;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 12px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff6f00;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: 180px;
+      text-decoration: none;
+    }
+
+    .btn-regresar:hover {
+      background-color: #cc5800;
+      box-shadow: 0 0 15px #cc5800;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .item {
+      position: relative;
+      width: 220px;
+      perspective: 1200px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .item:hover {
+      z-index: 100;
+    }
+
+    .rotating-image {
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+      background: radial-gradient(circle at center, #ffdb60, #ff6f00);
+      animation: doorSpin 10s linear infinite;
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease;
+      flex-shrink: 0;
+    }
+
+    .item:hover .rotating-image {
+      animation-play-state: paused;
+      transform: scale(1.2) rotateY(0deg);
+    }
+
+    .info {
+      position: absolute;
+      top: 0;
+      left: 240px;
+      background: rgba(0,0,0,0.75);
+      padding: 35px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #ff6f00;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      font-size: 1.1em;
+      line-height: 1.9;
+      color: #fff;
+      letter-spacing: 0.02em;
+      width: 300px;
+    }
+
+    .item:hover .info {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @keyframes doorSpin {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-con-gifs {
+        flex-direction: column;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .item {
+        flex-direction: column;
+      }
+
+      .info {
+        position: static;
+        margin-left: 0;
+        margin-top: 15px;
+        width: 90%;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+
+      .item:hover .rotating-image {
+        transform: scale(1.2) rotateY(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-con-gifs">
+    <img src="kid.GIF" alt="GIF Izquierda">
+    <h1>Playeras Dragon Ball</h1>
+    <img src="kid.GIF" alt="GIF Derecha">
+  </div>
+
+  <a href="index.html" class="btn-regresar">← Regresar</a>
+
+  <div class="gallery">
+
+    <!-- Playeras -->
+ <div class="item"><img src="/Images/goku.webp" alt="Playera Goku" class="rotating-image" />
+      <div class="info"><strong>Playera Goku</strong><br>Pose icónica de Kamehameha.<br>Material: Algodón 100%.<br>Precio: $299 MXN.<br>Estampado resistente y colores vibrantes.</div>
+    </div>
+
+    <div class="item"><img src="/Images/vegeta.png" alt="Playera Vegeta" class="rotating-image" />
+      <div class="info"><strong>Playera Vegeta</strong><br>Modo Super Saiyajin.<br>Material: Poliéster y algodón.<br>Precio: $320 MXN.<br>Diseño audaz para fanáticos del príncipe Saiyajin.</div>
+    </div>
+
+    <div class="item"><img src="/Images/freezer.png" alt="Playera Freezer" class="rotating-image" />
+      <div class="info"><strong>Playera Freezer</strong><br>Fondo espacial y diseño único.<br>Material: Algodón premium.<br>Precio: $350 MXN.<br>Perfecta para amantes de los villanos legendarios.</div>
+    </div>
+
+    <div class="item"><img src="/Images/gohan.png" alt="Playera Gohan" class="rotating-image" />
+      <div class="info"><strong>Playera Gohan</strong><br>Entrenando para la saga de Cell.<br>Material: Mezcla algodón/poliéster.<br>Precio: $310 MXN.<br>Ideal para los fanáticos de la juventud de Gohan.</div>
+    </div>
+
+    <div class="item"><img src="/Images/krilin.png" alt="Playera Krillin" class="rotating-image" />
+      <div class="info"><strong>Playera Krillin</strong><br>El valiente amigo de Goku.<br>Material: Algodón 100%.<br>Precio: $290 MXN.<br>Diseño clásico y cómodo.</div>
+    </div>
+
+    <div class="item"><img src="/Images/piccolo.png" alt="Playera Piccolo" class="rotating-image" />
+      <div class="info"><strong>Playera Piccolo</strong><br>Guerrero Namekiano.<br>Material: Algodón premium.<br>Precio: $310 MXN.<br>Ideal para fans del maestro de Gohan.</div>
+    </div>
+
+    <div class="item"><img src="/Images/trunks.png" alt="Playera Trunks" class="rotating-image" />
+      <div class="info"><strong>Playera Trunks</strong><br>El guerrero del futuro.<br>Material: Mezcla poliéster/algodón.<br>Precio: $315 MXN.<br>Diseño fresco y moderno.</div>
+    </div>
+
+    <div class="item"><img src="/Images/bulma.png" alt="Playera Bulma" class="rotating-image" />
+      <div class="info"><strong>Playera Bulma</strong><br>Científica brillante.<br>Material: Algodón suave.<br>Precio: $295 MXN.<br>Perfecta para fans femeninas.</div>
+    </div>
+
+    <div class="item"><img src="/Images/Goten.png" alt="Playera Goten" class="rotating-image" />
+      <div class="info"><strong>Playera Goten</strong><br>Hijo menor de Goku.<br>Material: Algodón cómodo.<br>Precio: $280 MXN.<br>Diseño infantil y alegre.</div>
+    </div>
+
+    <div class="item"><img src="/Images/Majin boo.png" alt="Playera Majin Buu" class="rotating-image" />
+      <div class="info"><strong>Playera Majin Buu</strong><br>Villano rosado legendario.<br>Material: Algodón premium.<br>Precio: $340 MXN.<br>Diseño único y colorido.</div>
+    </div>
+
+    <div class="item"><img src="/Images/raditz.png" alt="Playera Raditz" class="rotating-image" />
+      <div class="info"><strong>Playera Raditz</strong><br>Hermano de Goku.<br>Material: Mezcla poliéster/algodón.<br>Precio: $300 MXN.<br>Diseño para fanáticos clásicos.</div>
+    </div>
+
+    <div class="item"><img src="/Images/beerus.png" alt="Playera Beerus" class="rotating-image" />
+      <div class="info"><strong>Playera Beerus</strong><br>Dios de la destrucción.<br>Material: Algodón suave.<br>Precio: $360 MXN.<br>Diseño elegante y moderno.</div>
+    </div>
+
+    <div class="item"><img src="/Images/whis.png" alt="Playera Whis" class="rotating-image" />
+      <div class="info"><strong>Playera Whis</strong><br>Ángel guía de Beerus.<br>Material: Algodón premium.<br>Precio: $355 MXN.<br>Diseño sofisticado y elegante.</div>
+    </div>
+
+    <div class="item"><img src="/Images/gokuultra.png" alt="Playera Goku Ultra Instinct" class="rotating-image" />
+      <div class="info"><strong>Playera Goku Ultra Instinct</strong><br>Forma más poderosa de Goku.<br>Material: Poliéster y algodón.<br>Precio: $370 MXN.<br>Diseño para fans avanzados.</div>
+    </div>
+
+    <div class="item"><img src="/Images/android18.png" alt="Playera Android 18" class="rotating-image" />
+      <div class="info"><strong>Playera Android 18</strong><br>Guerrera imparable.<br>Material: Algodón suave.<br>Precio: $300 MXN.<br>Diseño femenino y fuerte.</div>
+    </div>
+
+    <div class="item"><img src="/Images/cell.png" alt="Playera Cell" class="rotating-image" />
+      <div class="info"><strong>Playera Cell</strong><br>Villano perfecto.<br>Material: Mezcla algodón/poliéster.<br>Precio: $340 MXN.<br>Diseño impactante y oscuro.</div>
+    </div>
+
+    <div class="item"><img src="/Images/gotenks.png" alt="Playera Gotenks" class="rotating-image" />
+      <div class="info"><strong>Playera Gotenks</strong><br>Fusión de Goten y Trunks.<br>Material: Algodón premium.<br>Precio: $320 MXN.<br>Diseño juvenil y divertido.</div>
+    </div>
+
+    <div class="item"><img src="/Images/vegeta_blue.png" alt="Playera Vegeta Blue" class="rotating-image" />
+      <div class="info"><strong>Playera Vegeta Blue</strong><br>Super Saiyajin Blue.<br>Material: Poliéster y algodón.<br>Precio: $360 MXN.<br>Diseño moderno y vibrante.</div>
+    </div>
+
+    <div class="item"><img src="bardock.png" alt="Playera Bardock" class="rotating-image" />
+      <div class="info"><strong>Playera Bardock</strong><br>Padre de Goku.<br>Material: Algodón cómodo.<br>Precio: $310 MXN.<br>Diseño clásico con toque rebelde.</div>
+    </div>
+
+    <div class="item"><img src="/Images/chi_chi.png" alt="Playera Chi-Chi" class="rotating-image" />
+      <div class="info"><strong>Playera Chi-Chi</strong><br>Esposa de Goku.<br>Material: Algodón suave.<br>Precio: $295 MXN.<br>Diseño femenino y elegante.</div>
+
+  </div>
+  </div>
+</body>
+</html>

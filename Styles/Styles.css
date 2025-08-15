@@ -1,0 +1,242 @@
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9E8C6;
+}
+
+header {
+     background-color: #FEF1DC;  background: url('../Images/verano.png') no-repeat center center/cover;
+  color: rgb(255, 255, 255);
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #C85A1E;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    background-color: #32415E;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a.boton {
+    font-size: 1rem;
+    padding: 0.8em 2em;
+    border-radius: 1em;
+    color: #fff;
+    font-weight: bolder;
+    background-color: #C17828; /* Fondo azul */
+    border: 3px solid #FAE6C6; /* Borde más oscuro */
+    box-shadow: -5px 5px 0px 0px #C17828; /* Sombra */
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+}
+
+nav a.boton:hover {
+    transform: translate(5px, -5px);
+    background-color: #A54A27;
+}
+.intro-text {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: block;
+    position: relative;
+    width: 300px;
+    margin: 12px;
+    padding: 2em 1.2em;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #C17627, #A54A27);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 320px;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #A54A27,#A54A27 );
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+    transform: scale(28);
+}
+
+.card:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+}
+
+.card-title {
+    color: #ffffff;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #ffffff;
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.services-desc {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0 auto 2rem;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.Contenedor {
+    display: flex;
+    flex: 1 1 75%;
+    margin: 3rem;
+    font-size: 25px;
+    font-family: Arial;
+    text-align: center;
+}
+
+.copy {
+    text-align: center;
+}
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+.servicios-texto {
+    text-align: justify;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.contact-text {
+    text-align: justify;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    max-width: 800px;
+    line-height: 1.6;
+}
+#direccion {
+  background-color: #32415E;
+}
