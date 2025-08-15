@@ -16,8 +16,8 @@
 
   <!-- BOTONES CAFÉS -->
   <nav>
-     <a href="Index.html" class="boton">Catalogo</a>
-    <a href="Direccion.html" class="boton">Contactanos</a>
+     <a href="/index.html" class="boton">Catalogo</a>
+    <a href="/Html/Direccion.html" class="boton">Contactanos</a>
     <a href="Inicio.html" class="boton">Acerca de nosotros</a>
   </nav>
 
@@ -31,75 +31,221 @@
   <!-- CARRUSEL DE PLAYERAS -->
   <section class="carrusel">
     <h2>Explora nuestras colecciones</h2>
-    <div class="slider">
-      <div class="slide-track">
-        <!-- Repite para cada playera -->
-        <a href="dragonball.html" class="slide">
-          <img src="img/bill.png" alt="Bills" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Bills</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/clasico.png" alt="Clásico" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Clásico</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/fusion.png" alt="Fusión" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Fusión</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/goku.png" alt="Goku" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Goku</p>
-        </a>
-        <a href="Spiderman.html" class="slide">
-          <img src="img/spider2.png" alt="telaraña" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Spiderman</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/vegeta.png" alt="Vegeta" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Vegeta</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/nube.png" alt="Nube Voladora" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Nube</p>
-        </a>
-
-        <!-- Duplicados para scroll infinito -->
-        <a href="Goku.html" class="slide">
-          <img src="img/androide.png" alt="Androide" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Spiderman</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/bill.png" alt="Bills" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Bills</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/clasico.png" alt="Clásico" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Clásico</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/fusion.png" alt="Fusión" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Fusión</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/goku.png" alt="Goku" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Goku</p>
-        </a>
-        <a href="Goku.html" class="slide">
-          <img src="img/sayayin.png" alt="Sayayin" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Sayayin</p>
-        </a>
-        <a href="dragonball.html" class="slide">
-          <img src="img/vegeta.png" alt="Vegeta" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Vegeta</p>
-        </a>
-        <a href="dragonball.html" class="slide">
-          <img src="img/nube.png" alt="Nube Voladora" onerror="this.onerror=null;this.src='img/placeholder.png';">
-          <p>Nube</p>
-        </a>
+    <div class="carrusel-container">
+      <button class="carrusel-btn prev">&#10094;</button>
+      <div class="carrusel-track">
+        <!-- Solo las primeras 4 imágenes, repetidas para efecto infinito -->
+        <div class="carrusel-item">
+          <a href="dragonball.html">
+            <div class="img-box">
+              <img src="img/bill.png" alt="Bills" />
+            </div>
+            <p>Bills</p>
+          </a>
+        </div>
+        <div class="carrusel-item">
+          <a href="Goku.html">
+            <div class="img-box">
+              <img src="img/clasico.png" alt="Clásico" />
+            </div>
+            <p>Clásico</p>
+          </a>
+        </div>
+        <div class="carrusel-item">
+          <a href="Goku.html">
+            <div class="img-box">
+              <img src="img/fusion.png" alt="Fusión" />
+            </div>
+            <p>Fusión</p>
+          </a>
+        </div>
+        <div class="carrusel-item">
+          <a href="Goku.html">
+            <div class="img-box">
+              <img src="img/goku.png" alt="Goku" />
+            </div>
+            <p>Goku</p>
+          </a>
+        </div>
+        <!-- Repetición para efecto infinito -->
+        <div class="carrusel-item">
+          <a href="dragonball.html">
+            <div class="img-box">
+              <img src="img/bill.png" alt="Bills" />
+            </div>
+            <p>Bills</p>
+          </a>
+        </div>
+        <div class="carrusel-item">
+          <a href="Goku.html">
+            <div class="img-box">
+              <img src="img/clasico.png" alt="Clásico" />
+            </div>
+            <p>Clásico</p>
+          </a>
+        </div>
+        <div class="carrusel-item">
+          <a href="Goku.html">
+            <div class="img-box">
+              <img src="img/fusion.png" alt="Fusión" />
+            </div>
+            <p>Fusión</p>
+          </a>
+        </div>
+        <div class="carrusel-item">
+          <a href="Goku.html">
+            <div class="img-box">
+              <img src="img/goku.png" alt="Goku" />
+            </div>
+            <p>Goku</p>
+          </a>
+        </div>
       </div>
+      <button class="carrusel-btn next">&#10095;</button>
     </div>
   </section>
 
+  <style>
+/* Carrusel estilos mejorados */
+.carrusel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff8f0;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 30px 0;
+}
+.carrusel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.7s cubic-bezier(.77,.2,.32,1.01);
+  width: 100%;
+  overflow: hidden;
+  padding: 0 50px;
+}
+.carrusel-item {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 10px 0 15px 0;
+  transition: box-shadow 0.3s;
+}
+.carrusel-item:hover {
+  box-shadow: 0 4px 24px rgba(255,111,0,0.18);
+}
+.img-box {
+  width: 150px;
+  aspect-ratio: 1/1;
+  background: #f7f7f7;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s;
+}
+.carrusel-item:hover .img-box img {
+  transform: scale(1.08);
+}
+.carrusel-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #ff6f00;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
+}
+.carrusel-btn {
+  background: #ff6f00;
+  color: #fff;
+  border: none;
+  font-size: 2em;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.85;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.carrusel-btn:hover {
+  background: #cc5800;
+  box-shadow: 0 4px 16px rgba(255,111,0,0.18);
+}
+.carrusel-btn.prev { left: 10px; }
+.carrusel-btn.next { right: 10px; }
+@media (max-width: 600px) {
+  .carrusel-track { gap: 10px; padding: 0 20px; }
+  .carrusel-item { flex: 0 0 120px; }
+  .img-box { width: 90px; }
+  .carrusel-btn { font-size: 1.5em; width: 32px; height: 32px; }
+  .carrusel-container { padding: 15px 0; }
+}
+  </style>
+  <script>
+const track = document.querySelector('.carrusel-track');
+const prevBtn = document.querySelector('.carrusel-btn.prev');
+const nextBtn = document.querySelector('.carrusel-btn.next');
+const items = document.querySelectorAll('.carrusel-item');
+const visible = 4;
+let index = 0;
+let autoInterval;
+
+function updateCarousel() {
+  const itemWidth = items[0].offsetWidth + (window.innerWidth <= 600 ? 10 : 30);
+  if (index > items.length - visible) index = 0;
+  if (index < 0) index = items.length - visible;
+  track.style.transform = `translateX(-${index * itemWidth}px)`;
+}
+function nextAuto() {
+  index++;
+  updateCarousel();
+}
+function prevManual() {
+  index--;
+  updateCarousel();
+}
+function nextManual() {
+  index++;
+  updateCarousel();
+}
+function startAuto() {
+  autoInterval = setInterval(nextAuto, 3000);
+}
+function stopAuto() {
+  clearInterval(autoInterval);
+}
+prevBtn.onclick = prevManual;
+nextBtn.onclick = nextManual;
+window.addEventListener('resize', updateCarousel);
+track.addEventListener('mouseenter', stopAuto);
+track.addEventListener('mouseleave', startAuto);
+document.addEventListener('DOMContentLoaded', () => {
+  updateCarousel();
+  startAuto();
+});
+  </script>
 
 </body>
 </html>
